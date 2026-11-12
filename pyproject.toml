@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csv-empty-pruner"
+version = "1.0.0"
+description = "Remove rows whose cells are all blank after trimming."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "seipass"}]
+
+[project.scripts]
+csv-empty-pruner = "csv_empty_pruner:main"
+
+[tool.setuptools]
+py-modules = ["csv_empty_pruner"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
